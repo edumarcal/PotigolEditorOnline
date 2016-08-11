@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function textbox()
+      {
+        elementoEmFoco = document.activeElement;
+        //ctl = document.getElementById('line1') | document.getElementById('example2');
+        var posicaoInicial = elementoEmFoco.selectionStart;
+        var posicaoFinal = elementoEmFoco.selectionEnd; //Erro de implementação
+        document.getElementById("conteudo").innerHTML = elementoEmFoco.id;
+        document.getElementById("posicaoInicial").innerHTML = posicaoInicial;
+        document.getElementById("posicaoFinal").innerHTML = posicaoFinal;
+      }
+      function enterpressalert(e, input){
+        var code = (e.keyCode ? e.keyCode : e.which);
+        if(code == 13) { //Enter keycode
+         //alert('enter press');
+         //set focus element
+         document.getElementById("example2").focus();
+
+        }
+      }
+    </script>
+  </head>
+  <body>
+
+    <input id="example1" type="text" onKeyPress="enterpressalert(event, this)" onkeyup="textbox()">
+    <input id="example2" type="text" onkeyup="textbox()">
+    <p id="conteudo"></p>
+    <p id="posicaoInicial"></p>
+    <p id="posicaoFinal"></p>
+  </body>
+</html>
