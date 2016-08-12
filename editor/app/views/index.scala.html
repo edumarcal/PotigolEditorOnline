@@ -1,0 +1,23 @@
+@main("Editor Potigol") {
+    <script>
+        function update(e, tag) {
+            //var tagEmFoco = document.activeElement;
+            var cursor = tag.selectionStart;
+            var code = (e.keyCode ? e.keyCode : e.which);
+            
+            if(code == 13) {
+                var line = document.createElement('input');
+                line.setAttribute("id", (document.getElementById("body").children.length+1).toString());
+                line.setAttribute("type","text");
+                line.setAttribute("onKeyPress","update(event, this)" );
+                document.getElementById("body").appendChild(line).focus();
+                
+                console.info(line);
+            }
+            
+        }
+    </script>
+    <div id="body">
+        <input id="1" type="text" onKeyPress="update(event, this)">
+    </div>
+}
