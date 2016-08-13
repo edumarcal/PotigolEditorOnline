@@ -22,11 +22,19 @@
                 //console.info(line);
             }
             */
+            $.post("/mensagem", {
+               caracter: e.keyCode,
+               //caracter: String.fromCharCode(e.keyCode),
+               position: cursor,
+               action: "insert"
+            });
+            
+            
         }
     </script>
     <div id="body">
 <!--        <input id="1" type="text" onKeyPress="update(event, this)"> -->
 <!--        <input id="1" name="1" type="text" onKeydown="update(event, this)"> -->
-        <textarea id="texto" onKeydown="update(event, this)" style="width:100%; height:100px;"></textarea>
+        <textarea id="texto" onKeydown="update(event, this)" style="width:100%; height:300px;"></textarea>
     </div>
 }
