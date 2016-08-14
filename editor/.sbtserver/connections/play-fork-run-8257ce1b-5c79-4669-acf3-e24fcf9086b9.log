@@ -1,9 +1,0 @@
-New log file opened at Sat Aug 13 19:27:43 BRT 2016 by 19044@papejajunior-NH4CU03
-Sending msg to client play-fork-run-8257ce1b-5c79-4669-acf3-e24fcf9086b9: DetachedLogEvent(LogMessage(debug,sbt server socket logs are in: /home/papejajunior/workspace/gitlab/EditorOnline/editor/.sbtserver/connections/master.log))
-Sending msg to client play-fork-run-8257ce1b-5c79-4669-acf3-e24fcf9086b9: DetachedLogEvent(LogMessage(debug,sbt general server logs are in: /home/papejajunior/workspace/gitlab/EditorOnline/editor/.sbtserver/master.log))
-Sending msg to client play-fork-run-8257ce1b-5c79-4669-acf3-e24fcf9086b9: DetachedLogEvent(LogMessage(debug,sbt client logs are in: /home/papejajunior/workspace/gitlab/EditorOnline/editor/.sbtserver/connections/play-fork-run-8257ce1b-5c79-4669-acf3-e24fcf9086b9.log))
-Reading next message from client.
-Client play-fork-run-8257ce1b-5c79-4669-acf3-e24fcf9086b9 EOF, shutting down.
-Stopping client.
-Client play-fork-run-8257ce1b-5c79-4669-acf3-e24fcf9086b9 thread exiting.
-Dropping message (0,ReceivedResponse()) to dead client play-fork-run-8257ce1b-5c79-4669-acf3-e24fcf9086b9
