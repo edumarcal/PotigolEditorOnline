@@ -9,36 +9,16 @@ import scala.collection.mutable.Queue;
 class Servidor @Inject() extends Controller {
     var pedidos = new Queue[Char] //Codigo
     var requisicao = new Queue[AnyContent] //Empilha todos os pedidos
-
-    val thread = new Thread {
-        override def run {
-            if(requisicao != Nil) {
-                while(!requisicao.isEmpty) {
-                    val element = requisicao.dequeue;
-                    val caracter = element.asFormUrlEncoded.map { x => x("caracter")(0).toInt}.getOrElse(-1) 
-          	        val position = element.asFormUrlEncoded.map { x => x("position")(0).toInt}.getOrElse(-1)
-          	        val action = element.asFormUrlEncoded.map { x => x("action")(0)}.getOrElse("") 
-          	
-          	        if(position != -1 && position >= pedidos.size)
-          	            pedidos+=(caracter.toChar)
-          	        
-          	        println("Thread--------------------------------------------------------")
-                    println(pedidos)
-                    println("--------------------------------------------------------------")
-                }
-            }
-        }
-    }
-    
+   
     def resultMessage() = {
        while(!requisicao.isEmpty) {
             val element = requisicao.dequeue;
-            val caracter = element.asFormUrlEncoded.map { x => x("caracter")(0).toInt}.getOrElse(-1) 
+            val caracter = element.asFormUrlEncoded.map { x => x("caracter")(0)}.getOrElse("") 
             val position = element.asFormUrlEncoded.map { x => x("position")(0).toInt}.getOrElse(-1)
             val action = element.asFormUrlEncoded.map { x => x("action")(0)}.getOrElse("") 
     
             if(position != -1 && position >= pedidos.size)
-                pedidos+=(caracter.toChar)
+                pedidos+=(caracter(0))
         }
         println("Thread--------------------------------------------------------")
         println(pedidos)

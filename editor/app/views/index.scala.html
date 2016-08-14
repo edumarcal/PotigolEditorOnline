@@ -23,13 +23,15 @@
             }
             */
             $.post("/mensagem", {
-               caracter: e.keyCode,
+               caracter: e.key,
                //caracter: String.fromCharCode(e.keyCode),
                position: cursor,
                action: "insert"
             });
             
-            
+            //console.warn(String.fromCharCode(e.keyCode));
+            console.warn(e.key);
+            console.info(e);
         }
     </script>
     <div id="body">
