@@ -1,5 +1,5 @@
-New log file opened at Sun Aug 14 11:27:34 BRT 2016 by 3886@papejajunior-NH4CU03
-jvm 3886@papejajunior-NH4CU03
+New log file opened at Sun Aug 14 23:11:27 BRT 2016 by 3932@papejajunior-NH4CU03
+jvm 3932@papejajunior-NH4CU03
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.101-b13
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in /home/papejajunior/workspace/gitlab/EditorOnline/editor/project, returning: (editor-build)
 Loading project definition from /home/papejajunior/workspace/gitlab/EditorOnline/editor/project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@6b6ab431, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@689ce927, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -66,4 +66,100 @@ Reapplying settings...
 Set current project to editor (in build file:/home/papejajunior/workspace/gitlab/EditorOnline/editor/)
 > iflast shell
 > server-send-ready-for-request
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@32907ff4, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 4 s, completed Aug 14, 2016 11:11:46 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/home/papejajunior/workspace/gitlab/EditorOnline/editor/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@5aa0d8d2, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 1 s, completed Aug 14, 2016 11:11:47 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/home/papejajunior/workspace/gitlab/EditorOnline/editor/}root/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@62be7968, check cycles: false
+Total time: 0 s, completed Aug 14, 2016 11:11:47 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/home/papejajunior/workspace/gitlab/EditorOnline/editor/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@734c174f, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 1 s, completed Aug 14, 2016 11:11:49 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@74deeab1, check cycles: false
+Total time: 0 s, completed Aug 14, 2016 11:11:51 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/home/papejajunior/workspace/gitlab/EditorOnline/editor/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@103630d1, check cycles: false
+Total time: 1 s, completed Aug 14, 2016 11:11:57 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@6897eb19, check cycles: false
+Total time: 0 s, completed Aug 14, 2016 11:12:01 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 1
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@5ee34bc5, check cycles: false
+Total time: 0 s, completed Aug 14, 2016 11:37:36 PM
+> server-post-command-cleanup
 > server-handle-next-server-request

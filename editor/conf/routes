@@ -11,8 +11,12 @@ GET     /message                    controllers.AsyncController.message
 
 
 #----------------------------------------------------------------------------------
+GET     /editor                      controllers.Servidor.index
 GET     /mensagem                    controllers.Servidor.getMessage
 POST    /mensagem                    controllers.Servidor.postMessage
+
+GET     /compilar                    controllers.Servidor.getCompilar
+POST    /compilar                    controllers.Servidor.postCompilar
 #----------------------------------------------------------------------------------
 
 

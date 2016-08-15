@@ -1,0 +1,64 @@
+@import scala.collection.mutable.Queue
+@(codigos: Queue[Char])
+@main("Editor: principal") {
+    <script>
+        function update(e, tag) {
+            var cursor = tag.selectionStart;
+            var code = (e.keyCode ? e.keyCode : e.which);
+            
+            console.log(cursor);
+            
+            if(code == 9) {
+                e.preventDefault(); //cancelar a função do tab de mudar o foco
+                tag.value += "\t";
+            } 
+           
+           /* 
+            if(code == 13) {
+                var line = document.createElement('input');
+                line.setAttribute("id", (document.getElementById("body").children.length+1).toString());
+                line.setAttribute("type","text");
+                line.setAttribute("onKeyPress","update(event, this)" );
+                document.getElementById("body").appendChild(line).focus();
+
+                //console.info(line);
+            }
+            */
+            if(code == 8 || code == 46) {
+                $.post("/mensagem", {
+                    caracter: e.key,
+                    position: cursor,
+                    action: "delete"
+                });    
+            }
+            
+            $.post("/mensagem", {
+               caracter: e.key,
+               position: cursor,
+               action: "insert"
+            });
+            
+            console.warn(e.keyCode+0xF100);
+            //console.log("0xF1" + e.KeyCode.charCodeAt(0).toString(16))
+            console.info(e);
+        }
+        
+        function runCode() {
+            alert("Mandou compilar");
+            $.post("/compilar", {});
+            $.get("/compilar", function(data){
+               document.getElementById("resultado").innerHTML = data;
+            });
+        }
+        
+    </script>
+    <div id="body">
+<!--        <input id="1" type="text" onKeyPress="update(event, this)"> -->
+<!--        <input id="1" name="1" type="text" onKeydown="update(event, this)"> 
+onKeydown="update(event, this)"
+            -->
+        <textarea id="texto" onkeypress="update(event, this)"style="width:100%; height:300px;">@codigos</textarea>
+        <button onclick="runCode()">Executar</button>
+        <div id="resultado"></div>
+    </div>
+}

@@ -1,4 +1,5 @@
 @main("Editor Potigol") {
+<META HTTP-EQUIV="refresh" CONTENT="5">
     <script>
         function update(e, tag) {
             var cursor = tag.selectionStart;
@@ -22,21 +23,30 @@
                 //console.info(line);
             }
             */
+            if(code == 8 || code == 46) {
+                $.post("/mensagem", {
+                    caracter: e.key,
+                    position: cursor,
+                    action: "delete"
+                });    
+            }
+            
             $.post("/mensagem", {
                caracter: e.key,
-               //caracter: String.fromCharCode(e.keyCode),
                position: cursor,
                action: "insert"
             });
             
-            //console.warn(String.fromCharCode(e.keyCode));
-            console.warn(e.key);
+            console.warn(e.keyCode+0xF100);
+            //console.log("0xF1" + e.KeyCode.charCodeAt(0).toString(16))
             console.info(e);
         }
     </script>
     <div id="body">
 <!--        <input id="1" type="text" onKeyPress="update(event, this)"> -->
-<!--        <input id="1" name="1" type="text" onKeydown="update(event, this)"> -->
-        <textarea id="texto" onKeydown="update(event, this)" style="width:100%; height:300px;"></textarea>
+<!--        <input id="1" name="1" type="text" onKeydown="update(event, this)"> 
+onKeydown="update(event, this)"
+            -->
+        <textarea id="texto" onkeypress="update(event, this)"style="width:100%; height:300px;"></textarea>
     </div>
 }

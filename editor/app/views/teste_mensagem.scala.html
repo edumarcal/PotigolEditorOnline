@@ -1,0 +1,44 @@
+@import scala.collection.mutable.Queue
+@(codigos: Queue[Char])
+@main("Editor:Secundário") {
+<!--<META HTTP-EQUIV="refresh" CONTENT="10">-->
+    <script>
+        function update(e, tag) {
+            var cursor = tag.selectionStart;
+            var code = (e.keyCode ? e.keyCode : e.which);
+            
+            console.log(cursor);
+            
+            if(code == 9) {
+                e.preventDefault(); //cancelar a função do tab de mudar o foco
+                tag.value += "\t";
+            } 
+           
+            if(code == 8 || code == 46) {
+                $.post("/mensagem", {
+                    caracter: e.key,
+                    position: cursor,
+                    action: "delete"
+                });    
+            }
+            
+            $.post("/mensagem", {
+               caracter: e.key,
+               position: cursor,
+               action: "insert"
+            });
+
+            console.info(e);
+            
+            var auto_refresh = setInterval(function()
+            {
+                $.get("/mensagem", function(data){
+                    $('#texto').val(data);
+                });
+            }, 20000);
+        }
+    </script>
+    <div id="body">
+        <textarea id="texto" onkeypress="update(event, this)"style="width:100%; height:300px;">@codigos</textarea>
+    </div>
+}
