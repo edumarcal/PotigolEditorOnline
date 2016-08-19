@@ -5,7 +5,7 @@ import play.api._
 import play.api.mvc._
 import scala.collection.mutable.Queue;
 import java.io._
-import scala.sys.process.{ stringSeqToProcess, ProcessBuilder }
+import scala.sys.process._
 
 @Singleton
 class Servidor @Inject() extends Controller {
@@ -22,9 +22,9 @@ class Servidor @Inject() extends Controller {
             if(position != -1 && position >= pedidos.size)
                 pedidos+=(caracter(0))
         }
-        println("Thread--------------------------------------------------------")
-        println(pedidos)
-        println("--------------------------------------------------------------")
+//        println("Thread--------------------------------------------------------")
+//        println(pedidos)
+//        println("--------------------------------------------------------------")
     }
     
     def index = Action {
@@ -32,7 +32,6 @@ class Servidor @Inject() extends Controller {
     }
 
     def getMessage =  Action {
-        //thread.start; Ok(views.html.teste(pedidos))
         resultMessage; Ok(views.html.teste_mensagem(pedidos))
     }
 
@@ -41,20 +40,19 @@ class Servidor @Inject() extends Controller {
     }
     
     def getCompilar =  Action {
-        Redirect(routes.Servidor.index)
+        Ok.sendFile(new File("saida.txt"))
     }
 
     def postCompilar = Action {
-        // PrintWriter
-        val pw = new PrintWriter(new File("arquivo.poti" ))
-        pw.write(pedidos.toString)
-        pw.close
-        
+        val pwArquivo = new PrintWriter(new File("arquivo.poti" ))
+        val p = pedidos.clone
+        var x = ""
+        while(!p.isEmpty) { x+= p.dequeue; }
+        pwArquivo.write(x)
+        pwArquivo.close
+
+        val command = Seq("java","-jar","/home/papejajunior/app/potigol097/potigol.jar", "arquivo.poti") #> new File("saida.txt")!
+
         Redirect(routes.Servidor.index)
-        // FileWriter
-        //val file = new File(canonicalFilename)
-        //val bw = new BufferedWriter(new FileWriter(file))
-        //bw.write(text)
-        //bw.close()
     }
 }

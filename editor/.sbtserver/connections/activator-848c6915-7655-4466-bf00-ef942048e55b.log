@@ -1,0 +1,9 @@
+New log file opened at Fri Aug 19 07:20:29 BRT 2016 by 3813@papejajunior-NH4CU03
+Sending msg to client activator-848c6915-7655-4466-bf00-ef942048e55b: DetachedLogEvent(LogMessage(debug,sbt server socket logs are in: /home/papejajunior/workspace/gitlab/EditorOnline/editor/.sbtserver/connections/master.log))
+Sending msg to client activator-848c6915-7655-4466-bf00-ef942048e55b: DetachedLogEvent(LogMessage(debug,sbt client logs are in: /home/papejajunior/workspace/gitlab/EditorOnline/editor/.sbtserver/connections/activator-848c6915-7655-4466-bf00-ef942048e55b.log))
+Sending msg to client activator-848c6915-7655-4466-bf00-ef942048e55b: DetachedLogEvent(LogMessage(debug,sbt general server logs are in: /home/papejajunior/workspace/gitlab/EditorOnline/editor/.sbtserver/master.log))
+Reading next message from client.
+Client activator-848c6915-7655-4466-bf00-ef942048e55b closed, java.net.SocketException: Connection reset, shutting down
+Stopping client.
+Dropping message (0,ReceivedResponse()) to dead client activator-848c6915-7655-4466-bf00-ef942048e55b
+Client activator-848c6915-7655-4466-bf00-ef942048e55b thread exiting.

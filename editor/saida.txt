@@ -1,0 +1,5 @@
+
+   1 | escreva "ola mundo"scutando"EEEescreva "teste"
+
+Valor 'scutando' não declarado.
+linha: 1
