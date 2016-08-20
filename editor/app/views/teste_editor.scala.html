@@ -1,47 +1,90 @@
-@import scala.collection.mutable.Queue
-@(codigos: Queue[Char])
+@(codigos: StringBuilder)
 @main("Editor: principal") {
     <script>
-        function update(e, tag) {
+        function updatePress(e, tag) {
             var cursor = tag.selectionStart;
             var code = (e.keyCode ? e.keyCode : e.which);
-
-            if(code == 9) {
+            
+           $.post("/mensagem", {
+                   caracter: e.key,
+                   position: cursor,
+                   action: "insert"
+                });    
+                
+//            console.info(cursor);
+//            console.info(e);
+        }
+        
+        function updateDown(e, tag){
+            var cursor = tag.selectionStart;
+            var code = (e.keyCode ? e.keyCode : e.which);
+            if(cursor == 0 && code == 9) {
                 e.preventDefault(); //cancelar a função do tab de mudar o foco
                 tag.value += "\t";
-            } 
-           
-            if(code == 8 || code == 46) {
                 $.post("/mensagem", {
-                    caracter: e.key,
+                    caracter: "\t",
                     position: cursor,
-                    action: "delete"
-                });    
+                    action: "inserir"
+                });  
+            } else if(cursor > 0) {
+                switch (code) {
+                    case 8: //tecla backspace
+                        $.post("/mensagem", {
+                            caracter: e.key,
+                            position: cursor,
+                            action: "backspace"
+                        });  
+console.warn(cursor);
+                        break;
+                    case 9: //tecla tab
+                        e.preventDefault(); //cancelar a função do tab de mudar o foco
+                        tag.value += "\t";
+                        $.post("/mensagem", {
+                            caracter: "\t",
+                            position: cursor,
+                            action: "inserir"
+                        });    
+console.warn(cursor);
+                        break;
+                      case 13: //tecla enter
+                        e.preventDefault(); //cancelar a função do tab de mudar o foco
+                        tag.value += "\t";
+                        $.post("/mensagem", {
+                            caracter: "\n",
+                            position: cursor,
+                            action: "insert"
+                        });    
+console.warn(cursor);
+                        break;
+                    case 46: //tecla delete
+                        $.post("/mensagem", {
+                            caracter: e.key,
+                            position: cursor,
+                            action: "delete"
+                        });   
+console.warn(cursor);
+                    break;
+                }
             }
             
-            $.post("/mensagem", {
-               caracter: e.key,
-               position: cursor,
-               action: "insert"
-            });
-
-            console.info(cursor+"\t"+e);
+//            console.warn(cursor);
+//            console.warn(e);
         }
         
         function runCode() {
-            $.post("/compilar", {});
+           $.post("/compilar", {});
            
            window.setInterval(function() {
                $.get("/compilar", function(data) {
                    document.getElementById("resultado").innerHTML = data;
                 });
-          }, 3000);
+          }, 2000);
             
         }
         
     </script>
     <div id="body">
-        <textarea id="texto" onkeypress="update(event, this)"style="width:100%; height:300px;">@codigos</textarea>
+        <textarea id="texto" onkeypress="updatePress(event, this)" onkeydown="updateDown(event, this)" style="width:100%; height:300px;">@codigos</textarea>
         <button onclick="runCode()">Executar</button>
         <div id="resultado" style="font-size:30px;color:blue"></div>
     </div>

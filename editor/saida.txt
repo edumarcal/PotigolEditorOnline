@@ -1,5 +1,5 @@
 
-   1 | escreva "ola mundo"scutando"EEEescreva "teste"
+   1 | esreeva "Vitória dsaGuerra"
 
-Valor 'scutando' não declarado.
+Valor 'esreeva' não declarado.
 linha: 1
