@@ -14,42 +14,43 @@ class Servidor @Inject() extends Controller {
     var requisicao = new Queue[AnyContent] //Empilha todos os pedidos
    
     def resultMessage() = {
+
+//println("#########################################################################")
+//println(requisicao)
+//println("#########################################################################")
+
        while(!requisicao.isEmpty) {
             val element = requisicao.dequeue;
-println("#########################################################################")
-println(element)
-println("#########################################################################")
             val caracter = element.asFormUrlEncoded.map { x => x("caracter")(0)}.getOrElse("") 
             val position = element.asFormUrlEncoded.map { x => x("position")(0).toInt}.getOrElse(-1)
             val action = element.asFormUrlEncoded.map { x => x("action")(0)}.getOrElse("") 
     
-            if(position != -1 && position >= pedidos.size) {
+            if(position != -1) { // && position >= pedidos.size
                 if(action == "insert") {
                     pedidos+=(caracter(0))
-println("--------------------------------------------------------")
-print(action)
-print("\t")
-println(pedidos)
-println("--------------------------------------------------------")
+//println("--------------------------------------------------------")
+//print(action)
+//print("\t")
+//println(pedidos)
+//println("--------------------------------------------------------")
                 } else if(action == "backspace") {
                     pedidos.delete(position-1, position) //margem do caracter
-println("--------------------------------------------------------")
-print(action)
-print("\t")
-println(pedidos)
-println("--------------------------------------------------------")
+//println("--------------------------------------------------------")
+//print(action)
+//print("\t")
+//print(caracter)
+//print("\t")
+//println(pedidos)
+//println("--------------------------------------------------------")
                 } else {
                     pedidos.delete(position, position+1) //margem do caracter
-println("--------------------------------------------------------")
-print(action)
-print("\t")
-println(pedidos)
-println("--------------------------------------------------------")
+//println("--------------------------------------------------------")
+//print(action)
+//print("\t")
+//println(pedidos)
+//println("--------------------------------------------------------")
                 }
             }
-            //println("--------------------------------------------------------")
-            //println(element)
-            //println("--------------------------------------------------------")
         }
     }
     
@@ -62,7 +63,7 @@ println("--------------------------------------------------------")
     }
 
     def postMessage = Action { implicit request =>
-        requisicao+=(request.body); Redirect(routes.Servidor.index)
+        requisicao+=(request.body); Ok//Redirect(routes.Servidor.index)
     }
     
     def getCompilar =  Action {
@@ -78,6 +79,6 @@ println("--------------------------------------------------------")
         
         val command = Seq("java","-jar","/home/papejajunior/app/potigol097/potigol.jar", "arquivo.poti") #> new File("saida.txt")!
 
-        Redirect(routes.Servidor.index)
+        Ok//Redirect(routes.Servidor.index)
     }
 }

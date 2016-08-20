@@ -1,13 +1,13 @@
-New log file opened at Fri Aug 19 19:34:08 BRT 2016 by 3870@papejajunior-NH4CU03
-Taking next connection to: 53231
-New client attempting to connect on port: 46415-53231
-  Address = /127.0.1.1:53231
-This client on port 46415 has uuid 97fb5c32-0983-4a97-8a15-dd8b8ad93420 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
-Connected Clients: activator-97fb5c32-0983-4a97-8a15-dd8b8ad93420
-Taking next connection to: 53231
-New client attempting to connect on port: 46416-53231
-  Address = /127.0.1.1:53231
-Handshake exception on socket: 46416
+New log file opened at Sat Aug 20 07:14:41 BRT 2016 by 3794@papejajunior-NH4CU03
+Taking next connection to: 48041
+New client attempting to connect on port: 35132-48041
+  Address = /127.0.1.1:48041
+This client on port 35132 has uuid 0de9ebdc-ef4c-4335-af7d-d83d9e1b1d9a configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-0de9ebdc-ef4c-4335-af7d-d83d9e1b1d9a
+Taking next connection to: 48041
+New client attempting to connect on port: 35133-48041
+  Address = /127.0.1.1:48041
+Handshake exception on socket: 35133
 sbt.impl.ipc.HandshakeException: Unable to perform handshake
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
 	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
@@ -17,21 +17,18 @@ Caused by: java.io.EOFException
 	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
 	... 2 more
-Taking next connection to: 53231
-New client attempting to connect on port: 46417-53231
-  Address = /127.0.1.1:53231
-This client on port 46417 has uuid 2f636318-ef44-4785-8284-abefede852f9 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
-Connected Clients: activator-97fb5c32-0983-4a97-8a15-dd8b8ad93420, activator-2f636318-ef44-4785-8284-abefede852f9
-Taking next connection to: 53231
+Taking next connection to: 48041
+New client attempting to connect on port: 35134-48041
+  Address = /127.0.1.1:48041
+This client on port 35134 has uuid 7f71e2a6-733f-432d-b8e8-2ea4a305fe2f configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-0de9ebdc-ef4c-4335-af7d-d83d9e1b1d9a, activator-7f71e2a6-733f-432d-b8e8-2ea4a305fe2f
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
-New client attempting to connect on port: 46631-53231
-  Address = /127.0.1.1:53231
-Handshake exception on socket: 46631
+Taking next connection to: 48041
+New client attempting to connect on port: 35188-48041
+  Address = /127.0.1.1:48041
+Handshake exception on socket: 35188
 sbt.impl.ipc.HandshakeException: Unable to perform handshake
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
 	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
@@ -41,54 +38,39 @@ Caused by: java.io.EOFException
 	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
 	... 2 more
-Taking next connection to: 53231
-New client attempting to connect on port: 46632-53231
-  Address = /127.0.1.1:53231
-This client on port 46632 has uuid e1278bc3-18c5-4c58-8c7e-b5e40e0a0c90 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: activator-2f636318-ef44-4785-8284-abefede852f9, play-fork-run-e1278bc3-18c5-4c58-8c7e-b5e40e0a0c90
-Taking next connection to: 53231
+Taking next connection to: 48041
+New client attempting to connect on port: 35189-48041
+  Address = /127.0.1.1:48041
+This client on port 35189 has uuid 9148a4c8-e99b-443c-a9c8-526a5591724d configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: activator-7f71e2a6-733f-432d-b8e8-2ea4a305fe2f, play-fork-run-9148a4c8-e99b-443c-a9c8-526a5591724d
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
-New client attempting to connect on port: 46781-53231
-  Address = /127.0.1.1:53231
-Handshake exception on socket: 46781
+Taking next connection to: 48041
+New client attempting to connect on port: 35371-48041
+  Address = /127.0.1.1:48041
+Handshake exception on socket: 35371
 sbt.impl.ipc.HandshakeException: Unable to perform handshake
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
 	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
@@ -98,126 +80,90 @@ Caused by: java.io.EOFException
 	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
 	... 2 more
-Taking next connection to: 53231
-New client attempting to connect on port: 46782-53231
-  Address = /127.0.1.1:53231
-This client on port 46782 has uuid e277841a-3382-453d-94d3-239e7d7075ca configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: activator-2f636318-ef44-4785-8284-abefede852f9, play-fork-run-e277841a-3382-453d-94d3-239e7d7075ca
-Taking next connection to: 53231
+Taking next connection to: 48041
+New client attempting to connect on port: 35372-48041
+  Address = /127.0.1.1:48041
+This client on port 35372 has uuid 434e2a36-4704-426a-8618-33bb22c5cc0f configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: activator-7f71e2a6-733f-432d-b8e8-2ea4a305fe2f, play-fork-run-9148a4c8-e99b-443c-a9c8-526a5591724d, play-fork-run-434e2a36-4704-426a-8618-33bb22c5cc0f
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
-New client attempting to connect on port: 47010-53231
-  Address = /127.0.1.1:53231
-Handshake exception on socket: 47010
-sbt.impl.ipc.HandshakeException: Unable to perform handshake
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
-	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
-	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
-Caused by: java.io.EOFException
-	at java.io.DataInputStream.readInt(DataInputStream.java:392)
-	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
-	... 2 more
-Taking next connection to: 53231
-New client attempting to connect on port: 47011-53231
-  Address = /127.0.1.1:53231
-This client on port 47011 has uuid 1c212f6b-2161-41ae-b91c-d7a3adca141c configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: activator-2f636318-ef44-4785-8284-abefede852f9, play-fork-run-1c212f6b-2161-41ae-b91c-d7a3adca141c
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
-New client attempting to connect on port: 47037-53231
-  Address = /127.0.1.1:53231
-Handshake exception on socket: 47037
-sbt.impl.ipc.HandshakeException: Unable to perform handshake
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
-	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
-	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
-Caused by: java.io.EOFException
-	at java.io.DataInputStream.readInt(DataInputStream.java:392)
-	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
-	... 2 more
-Taking next connection to: 53231
-New client attempting to connect on port: 47038-53231
-  Address = /127.0.1.1:53231
-This client on port 47038 has uuid 5d3b2280-768b-4f3b-a1bd-ff3c4e1e11fe configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: activator-2f636318-ef44-4785-8284-abefede852f9, play-fork-run-5d3b2280-768b-4f3b-a1bd-ff3c4e1e11fe
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53231
+Taking next connection to: 48041

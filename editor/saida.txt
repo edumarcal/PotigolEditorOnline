@@ -1,5 +1,0 @@
-
-   1 | esreeva "Vitória dsaGuerra"
-
-Valor 'esreeva' não declarado.
-linha: 1
