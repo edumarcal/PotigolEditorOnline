@@ -12,6 +12,7 @@ function updatePress(e, tag) {
 function updateDown(e, tag){
     var cursor = tag.selectionStart;
     var code = (e.keyCode ? e.keyCode : e.which);
+   
     if(cursor === 0 && code == 9) {
         e.preventDefault(); //cancelar a função do tab de mudar o foco
         tag.value += "\t";
@@ -28,7 +29,7 @@ function updateDown(e, tag){
                     position: cursor,
                     action: "backspace"
                 });  
-                //console.warn(cursor);
+console.warn(cursor);
                 break;
             case 9: //tecla tab
                 e.preventDefault(); //cancelar a função do tab de mudar o foco
@@ -38,11 +39,10 @@ function updateDown(e, tag){
                     position: cursor,
                     action: "inserir"
                 });    
-            //console.warn(cursor);
                 break;
               case 13: //tecla enter
                 $.post("/mensagem", {
-                    caracter: "\n",
+                    caracter: e.key,
                     position: cursor,
                     action: "insert"
                 });    
@@ -54,11 +54,11 @@ function updateDown(e, tag){
                     position: cursor,
                     action: "delete"
                 });   
-            //console.warn(cursor);
+console.info(cursor);
             break;
         }
     }
-//            console.warn(cursor);
+console.log(cursor);
 //            console.warn(e);
 }
         
@@ -79,9 +79,12 @@ function runCode() {
     }, 1000);
 }
 
-function updateMessage(codigo){
+function updateMessage(){
     window.setInterval(function() {
-        document.getElementById("texto").value = codigo;
-        console.info("run");
+        $.get("/code", function(data){
+            if(data) {
+               document.getElementById("texto").value = jQuery("#texto").html(data).text();
+            }
+        });
     }, 1000);
 }

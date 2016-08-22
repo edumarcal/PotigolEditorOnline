@@ -1,0 +1,8 @@
+@(codigos: StringBuilder)
+@main("Editor: principal") {
+    <div id="body">
+        <textarea id="texto" onkeypress="updatePress(event, this)" onkeydown="updateDown(event, this)" style="width:100%; height:300px;">@codigos</textarea>
+        <button onclick="runCode()">Executar</button>
+        <div id="resultado"></div>
+    </div>
+}
