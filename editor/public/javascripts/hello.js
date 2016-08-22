@@ -73,7 +73,9 @@ function runCode() {
        $.get("/compilar", function(data) {
            if(data) {
                result.setAttribute("style", "font-size:30px;color:blue");
-               result.innerHTML = data;   
+               $("#resultado").html(data.replace('\n','<br>'));
+               //result.innerHTML = data.toHtmlObject;
+               console.info(data.replace('\n','<br />'));
            }
         });
     }, 1000);

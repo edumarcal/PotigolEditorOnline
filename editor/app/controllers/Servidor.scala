@@ -23,9 +23,9 @@ class Servidor @Inject() extends Controller {
             if(position != -1) { // && position >= pedidos.size
                 if(action == "insert") {
                     if(caracter == "Enter")
-                        pedidos+=13 //caracter \n
+                        pedidos.insert(position, 13.toChar)
                     else 
-                        pedidos+=(caracter(0))
+                        pedidos.insert(position, caracter(0))
                 } else if(action == "backspace") {
                     pedidos.delete(position-1, position) //margem do caracter BACKSPACE
                 } else {

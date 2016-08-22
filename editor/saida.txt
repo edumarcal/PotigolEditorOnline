@@ -1,2 +1,5 @@
-ola mundo
-Obrigado Deus pelo dom  conhecimento
+
+   1 | escreva se
+
+an expression of type Null is ineligible for implicit conversion | case _ if (null) =>  |            
+linha: 1
